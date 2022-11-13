@@ -29,12 +29,12 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 300px;
-      height: 480px;
+      min-height: 480px;
       border-radius: 20px;
       background-color:hsl(0, 0%, 100%)
     }
 
-    .inner-card:first-child{
+    .inner-card:nth-child(2){
       position: relative;
       width: 275px;
       height: 60%;
@@ -42,14 +42,15 @@
       left: 12.5px;
       border-radius: 20px;
     }
-    .inner-card:nth-child(2){
+    .inner-card:nth-child(3){
       position: relative;
       width: 260px;
       height: 35%;
       left: 20px;
       background-color: hsl(0, 0%, 100%);
     }
-    h3{
+    h2{
+      font-size: 20px;
       font-weight: 700;
       text-align: center;
       padding: 10px;
@@ -59,6 +60,16 @@
       text-align: center;
       padding: 5px;
     }
+    .sr-only:not(:focus):not(:active) {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap; 
+      width: 1px;
+    }
+
   </style>
 </head>
 <body>
@@ -67,18 +78,18 @@
 
   Scan the QR code to visit Frontend Mentor and take your coding skills to the next level -->
 
-  <div class="card">
-    <img  src="/images/image-qr-code.png" class="inner-card">
-    </img>
+  <main class="card">
+    <h1 class="sr-only"> QR Code component</h1>
+    <img  src="./images/image-qr-code.png" alt="Qr code to frontendmentor.io" class="inner-card">
     <div class="inner-card">
-      <h3>Improve your front-end skills by building projects</h3>
+      <h2>Improve your front-end skills by building projects</h2>
       <p>Scan the Qr code to visit Frontend Mentor and take your coding skills to the next level</p>
     </div>
-  </div>
+  </main>
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Bakare David</a>.
-  </div>
+  </footer>
 </body>
 </html>
